@@ -19,7 +19,7 @@ connectDB()
     .then(() => {
         console.log("Database Connection Established....");
         app.listen(process.env.PORT, () => {
-            console.log("Server is listining and running on PORT 5000...");
+            console.log("Server is listining and running on PORT "+process.env.PORT+"...");
         })
     })
     .catch((err) => {
