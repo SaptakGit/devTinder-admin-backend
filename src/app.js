@@ -11,15 +11,15 @@ const authRouter = require("./routes/auth");
 const profileRouter = require("./routes/profile");
 
 
-app.use("/admin", authRouter);
-app.use("/admin", profileRouter);
+app.use("/", authRouter);
+app.use("/", profileRouter);
 
 
 connectDB()
     .then(() => {
         console.log("Database Connection Established....");
         app.listen(process.env.PORT, () => {
-            console.log("Server is listining and running on PORT "+process.env.PORT+"...");
+            console.log("Server is listining and running on PORT 5000...");
         })
     })
     .catch((err) => {
