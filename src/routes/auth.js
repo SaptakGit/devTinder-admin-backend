@@ -6,9 +6,6 @@ const bcrypt = require("bcrypt");
 const validator = require("validator");
 
 
-app.get('/test', (req, res) => {
-    res.send('Admin API Working');
-});
 
 // Sign up API
 authRouter.post("/signup", async (req,res) => {
