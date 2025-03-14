@@ -10,7 +10,7 @@ app.use(express.json());
 const authRouter = require("./routes/auth");
 const profileRouter = require("./routes/profile");
 
-app.get('/test', (req, res) => {
+/*app.get('/test', (req, res) => {
     res.send('Admin API Working');
 });
 
@@ -22,7 +22,7 @@ app.post('/testlogin', (req, res) => {
 app.use((req, res, next) => {
     console.log(`Received request: ${req.method} ${req.url}`);
     next();
-});
+});*/
 
 app.use("/", authRouter);
 app.use("/", profileRouter);
