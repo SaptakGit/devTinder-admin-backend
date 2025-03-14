@@ -10,6 +10,10 @@ app.use(express.json());
 const authRouter = require("./routes/auth");
 const profileRouter = require("./routes/profile");
 
+app.use((req, res, next) => {
+    console.log(`Received request: ${req.method} ${req.url}`);
+    next();
+});
 
 app.use("/", authRouter);
 app.use("/", profileRouter);
