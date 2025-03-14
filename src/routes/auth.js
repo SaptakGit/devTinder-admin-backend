@@ -37,6 +37,7 @@ authRouter.post("/signup", async (req,res) => {
 
 // Login API
 authRouter.post("/login", async (req,res) => {
+    console.log('Admin login hit!');
     try{
         const { emailId, password } = req.body;
         
