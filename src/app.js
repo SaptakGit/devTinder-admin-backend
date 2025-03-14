@@ -14,6 +14,11 @@ app.get('/test', (req, res) => {
     res.send('Admin API Working');
 });
 
+app.post('/testlogin', (req, res) => {
+    console.log('Login route hit!');
+    res.send('Login successful');
+});
+
 app.use((req, res, next) => {
     console.log(`Received request: ${req.method} ${req.url}`);
     next();
