@@ -14,6 +14,7 @@ app.use(express.json());
 
 const authRouter = require("./routes/auth");
 const profileRouter = require("./routes/profile");
+const userRouter = require("./routes/user");
 
 /*app.get('/test', (req, res) => {
     res.send('Admin API Working');
@@ -31,6 +32,7 @@ app.use((req, res, next) => {
 
 app.use("/", authRouter);
 app.use("/", profileRouter);
+app.use("/", userRouter);
 
 
 connectDB()
